@@ -141,7 +141,7 @@ class TipTap():
 
         @staticmethod
         def OnHardware():
-            return True
+            return False
 
         @staticmethod
         def GetBodyState(body_indx=-1):
@@ -149,10 +149,18 @@ class TipTap():
             state_indx = body_indx + 1
             if step_counter != state_snapshot[state_indx][1] and dt_actual > 0:
                 if body_indx == -1:
+
+
                     pos_linkcom_world, world_rot_linkcom = \
                         p.getBasePositionAndOrientation(botId)
+                     
+                    print("pos_linkcom_world",pos_linkcom_world,"world_rot_linkcom",world_rot_linkcom)
+
                     linVel_linkcom_world, rotVel_linkcom_world = \
                         p.getBaseVelocity(botId)
+
+                    print("linVel_linkcom_world",linVel_linkcom_world,"rotVel_linkcom_world",rotVel_linkcom_world)
+
                 else:
                     pos_linkcom_world, world_rot_linkcom, _, _, _, _, \
                         linVel_linkcom_world, rotVel_linkcom_world \
