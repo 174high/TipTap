@@ -24,13 +24,13 @@ StartOrientation = p.getQuaternionFromEuler([0, 0, 0])
 planeId = p.loadURDF("plane.urdf")
 
 
-robot = p.loadURDF("test-my-first-1.urdf", StartPos, StartOrientation)
+robot = p.loadURDF("test-1.urdf", StartPos, StartOrientation)
 p.setRealTimeSimulation(1) # real-time instead of step control
 
 
 while 1:
 
-    p.stepSimulation()
-    time.sleep(0.01)
+#    p.stepSimulation()
+#    time.sleep(0.01)
 
     pass 
